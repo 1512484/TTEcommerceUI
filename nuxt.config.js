@@ -66,30 +66,30 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  proxy: {
-    "/api": {
-      target: process.env.MD_BACKEND_URL,
-      pathRewrite: { "^/api": "/" },
-    },
-  },
+//   proxy: {
+//     "/api": {
+//       target: process.env.MD_BACKEND_URL,
+//       pathRewrite: { "^/api": "/" },
+//     },
+//   },
 
-  axios: {
-    prefix: !isProduction ? "/api" : "",
-    withCredentials: true,
-  },
+//   axios: {
+//     prefix: !isProduction ? "/api" : "",
+//     withCredentials: true,
+//   },
 
-  env: {
-    baseURL: process.env.MD_BACKEND_URL,
-  },
+//   env: {
+//     baseURL: process.env.MD_BACKEND_URL,
+//   },
 
-  publicRuntimeConfig: {
-    appSpaceUrl: routerBase,
-    autoWorkshopAppUrl: `${process.env.MD_BACKEND_URL}`,
-    axios: {
-      browserBaseURL: !isProduction ? "" : "/",
-      baseURL: !isProduction ? "" : "/",
-    },
-  },
+//   publicRuntimeConfig: {
+//     appSpaceUrl: routerBase,
+//     autoWorkshopAppUrl: `${process.env.MD_BACKEND_URL}`,
+//     axios: {
+//       browserBaseURL: !isProduction ? "" : "/",
+//       baseURL: !isProduction ? "" : "/",
+//     },
+//   },
 
   router: {
     base: routerBase,
