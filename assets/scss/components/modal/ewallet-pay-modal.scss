@@ -1,0 +1,64 @@
+.ewallet-pay-modal {
+    .modal {
+        width: 994px;
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            padding: 20px;
+            padding-right: 0;
+            & > div {
+                padding-right: 20px;
+            }
+            .payment-content {
+                max-width: 658px;
+                width: 100%;
+                margin: auto;
+                padding: 8px 0 50px;
+            }
+            .ant-radio-group {
+                gap: 100px;
+                padding: 16px 16px 37px;
+                background: #F5F5F5;
+                .ant-radio-wrapper {
+                    margin-right: 0;
+                }
+            }
+            .wallet-item {
+                img {
+                    width: 70px;
+                }
+                .wallet-name {
+                    position: absolute;
+                    bottom: -25px;
+
+                }
+            }
+        }
+    }
+
+    @media (max-width: 639px) {
+        .modal {
+            .modal-content {
+                .payment-content {
+                    padding: 8px 1px 40px;
+                }
+                .ant-radio-group {
+                    padding: 18px 18px 39px;
+                    column-gap: 30px;
+                    row-gap: 50px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 484px) {
+        .modal {
+            .modal-content {
+                .ant-radio-group {
+                    justify-content: flex-start;
+                }
+            }
+        }
+    }
+}

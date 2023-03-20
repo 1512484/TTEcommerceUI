@@ -1,0 +1,99 @@
+.contact-page {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    .contact-content {
+        // gap: 100px;
+        gap: 30px;
+        .left-content {
+            // width: calc(34% - 50px);
+            width: 43%;
+            max-width: 410px;
+            .map {
+                padding-bottom: 139%;
+                .absolute-full {
+                    position: absolute !important;
+                }
+            }
+        }
+        .right-content {
+            // width: calc(66% - 50px);
+            width: 57%;
+            margin-left: auto;
+        }
+        .contact-info {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 60px;
+            .info-item {
+                position: relative;
+                width: 140px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &:nth-child(2) {
+                    width: 200px;
+                    padding: 0 20px;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 36px;
+                        left: 0;
+                        right: 0;
+                        height: calc(100% - 36px);
+                        border: 2px solid;
+                        border-color: transparent var(--color-border) transparent var(--color-border);
+                    }
+                }
+                &:first-child {
+                    align-items: flex-start;
+                }
+                .item-title {
+                    color: var(--color-gray);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 639px) {
+        padding-top: 30px;
+        padding-bottom: 52px;
+        .page-title {
+            font-size: var(--text-3xl);
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        .contact-content {
+            gap: 28px;
+            flex-direction: column-reverse;
+            .left-content, .right-content {
+                width: 100%;
+                max-width: 100%;
+            }
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 28px;
+                .info-item {
+                    width: auto;
+                    img {
+                        margin-bottom: 4px;
+                    }
+                    & > div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    &::after {
+                        display: none;
+                    }
+                }
+                .divider {
+                    width: 42px;
+                }
+            }
+        }
+        .control-btn-group {
+            margin-top: 0;
+        }
+    }
+}

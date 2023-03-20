@@ -1,0 +1,24 @@
+.review-modal {
+    .review-content {
+        .right-content {
+            .border {
+                width: 100%;
+                border: none;
+                border-top: 1px solid var(--color-border);
+            }
+        }
+    }
+
+    @media (max-width: 639px) {
+        .heading-title {
+            font-size: var(--text-3xl);
+            line-height: 1.2;
+        }
+        .border {
+            margin-bottom: 15px;
+        }
+        .btn-container {
+            padding: 0;
+        }
+    }
+}

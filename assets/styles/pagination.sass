@@ -1,0 +1,49 @@
+@mixin pagination-contain
+  border-radius: 4px
+  height: 36px
+  align-items: center
+  display: flex
+  @content
+
+@mixin pagination-item
+  width: 30px !important
+  height: 30px !important
+  line-height: 30px !important
+  font-weight: normal
+  color: $text-secondary-color
+  margin: 0 8px !important
+  @include text-2-regular
+
+.pagination-on-grey-background
+  background: #fff
+  @include pagination-contain
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next
+    @include pagination-item
+
+  .ant-pagination-item-active
+    border-color: $subtle-primary-color
+    background: $subtle-primary-color
+    border-radius: 4px
+    a
+      font-weight: bold
+      color: $standard-primary-color
+
+.pagination-on-white-background
+  background: #ebebeb
+  @include pagination-contain
+
+  .ant-pagination-item,
+  .ant-pagination-prev,
+  .ant-pagination-next
+    @include pagination-item
+
+  .ant-pagination-item-active
+    border-color: #fff
+    background: #fff
+    border-radius: 4px
+    a
+      font-weight: bold
+      color: $standard-primary-color

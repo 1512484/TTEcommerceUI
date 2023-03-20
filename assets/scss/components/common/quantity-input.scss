@@ -1,0 +1,38 @@
+.quantity-input-component {
+    --input-width: 124px;
+    --control-button-width: 40px;
+    
+    width: var(--input-width);
+    &.custom-input {
+        --input-margin-bottom: 0;
+    }
+    input {
+        padding: 3px var(--control-button-width);
+        text-align: center;
+    }
+    .input-control-btn {
+        position: absolute;
+        top: 1px;
+        width: var(--control-button-width);
+        height: calc(100% - 2px);
+        font-size: var(--text-base);
+        color: var(--color-text);
+        cursor: pointer;
+        user-select: none;
+        z-index: 1;
+        transition: 0.2s ease-in-out;
+        &:hover, &[disabled] {
+            background: var(--color-menu-hover);
+        }
+        &.minus-btn {
+            left: 1px;
+        }
+        &.plus-btn {
+            right: 1px;
+        }
+        &[disabled] {
+            cursor: default;
+            opacity: 0.2;
+        }
+    }
+}

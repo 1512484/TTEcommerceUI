@@ -1,0 +1,24 @@
+.comment-block-component {
+    .avatar {
+        width: 40px;
+        max-width: 40px;
+        height: 40px;
+    }
+    .comment-block-content {
+        .login {
+            margin-left: 60px;
+            .social-icon {
+                width: 24px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    @media (max-width: 639px) {
+        .comment-block-content {
+            .login {
+                margin-left: 53px;
+            }
+        }
+    }
+}

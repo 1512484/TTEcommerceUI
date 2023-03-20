@@ -1,0 +1,10 @@
+.rate-component {
+    * {
+        transition: unset !important;
+    }
+    :deep(.ant-rate-star) {
+        &:not(:last-child) {
+            margin-right: 6px;
+        }
+    }
+}

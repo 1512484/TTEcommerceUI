@@ -1,0 +1,76 @@
+.banner-component {
+    &.middle-banner {
+        .agile, .image-container {
+            --header-top: 0px;
+        }
+    }
+    .agile, .image-container {
+        padding-bottom: 46.875%;
+        // padding-bottom: calc(100vh - var(--sticky-top) - var(--header-top));
+
+        &.small {
+            padding-bottom: 20.83%;
+        }
+
+        &__list, &__actions {
+            position: absolute;
+        }
+        &__actions {
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+        }
+        &__list, 
+        &__track, 
+        &__slide {
+            height: 100%;
+        }
+        &__dots {
+            gap: 12px;
+        }
+        &__dot {
+            background: #B8B8B8;
+            border-radius: 50%;
+            max-width: 10px;
+            button {
+                width: 10px;
+                height: 10px;
+                background: transparent;
+            }
+            &--current {
+                background: var(--color-secondary);
+            }
+        }
+        .banner-item {
+            display: flex;
+        }
+    }
+
+    .banner-text {
+        max-width: 1202px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        .banner-text-img {
+            padding-top: 11%;
+            // max-width: 40.35%;
+            max-width: 25.26vw;
+            margin-bottom: 30px;
+        }
+
+    }
+
+    @media (max-width: 639px) {
+        .agile, .image-container {
+            // padding-bottom: 167%;
+
+            &.small {
+                padding-bottom: 66.13%;
+            }
+        }
+    }
+}

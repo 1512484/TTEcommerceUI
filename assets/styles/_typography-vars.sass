@@ -1,0 +1,92 @@
+$text-1-regular-size: 12px
+$text-2-regular-size: 13px
+$text-3-regular-size: 14px
+$text-4-regular-size: 16px
+
+// Heading
+$heading-3-size: 24px
+$heading-2-size: 20px
+
+// line height
+$line-height-primary: 18px
+$line-height-second: 24px
+
+@mixin text-1-regular
+  font-style: normal
+  font-weight: normal
+  font-size: $text-1-regular-size
+  line-height: 14px
+  @content
+
+@mixin text-2-regular
+  font-style: normal
+  font-weight: normal
+  font-size: 13px
+  line-height: 15px
+  @content
+
+@mixin text-2-bold
+  font-style: normal
+  font-weight: bold
+  font-size: 13px
+  line-height: 15px
+  @content
+
+@mixin text-2-semibold
+  font-style: normal
+  font-weight: 500
+  font-size: 13px
+  line-height: 15px
+  @content
+
+@mixin text-3-regular
+  font-style: normal
+  font-weight: bold
+  font-size: 14px
+  line-height: 18px
+  @content
+
+@mixin text-4-regular
+  font-style: normal
+  font-weight: bold
+  font-size: 16px
+  line-height: 19px
+  @content
+
+@mixin header-3-bold
+  font-style: normal
+  font-weight: bold
+  font-size: $heading-3-size
+  line-height: 28px
+
+@mixin header-2-bold
+  font-style: normal
+  font-weight: bold
+  font-size: $heading-2-size
+  line-height: 23px
+
+@mixin text-3-bold
+  font-style: normal
+  font-weight: bold
+  font-size: 14px
+  line-height: 16px
+  @content
+
+@mixin text-2-medium
+  font-style: normal
+  font-weight: 500
+  font-size: $text-3-regular-size
+  line-height: 15px
+  @content
+
+@mixin text-3-medium
+  font-style: normal
+  font-weight: 500
+  font-size: $text-3-regular-size
+  line-height: 16px
+
+@mixin text-0-bold
+  font-style: normal
+  font-weight: bold
+  font-size: 10px
+  line-height: 12px

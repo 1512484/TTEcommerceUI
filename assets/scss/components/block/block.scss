@@ -1,0 +1,34 @@
+.block-component {
+    --padding-y: 60px;
+    padding-top: var(--padding-y);
+    padding-bottom: var(--padding-y);
+    .block-title {
+        line-height: 1.2;
+    }
+
+    .block-description {
+        line-height: 1.5;
+    }
+
+    .block-title, .block-description {
+        max-width: 588px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (max-width: 639px) {
+        .block-title, .block-description {
+            max-width: 400px;
+        }
+    }
+    
+    @media (max-width: 429px) {
+        --padding-y: 30px;
+        .block-title {
+            max-width: 250px;
+        }
+        .block-description {
+            max-width: 300px;
+        }
+    }
+}

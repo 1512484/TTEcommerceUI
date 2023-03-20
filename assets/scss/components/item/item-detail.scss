@@ -1,0 +1,28 @@
+.item-detail-component {
+    .right-content {
+        .old-price {
+            color: var(--color-old-price);
+        }
+    }
+
+    @media (max-width: 639px) {
+        flex-direction: column;
+
+        .item-title {
+            font-size: var(--text-3xl);
+            line-height: 1.2;
+        }
+
+        .price {
+            font-size: var(--text-lg);
+        }
+
+        .detail-info {
+            margin-bottom: 18px;
+        }
+
+        .btn-group {
+            gap: 12px;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.order-page {
+    padding-top: 40px;
+    padding-bottom: 74px;
+    .header {
+        border-color: #A7A7A7;
+    }
+
+    @media (max-width: 639px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .page-title {
+            font-size: var(--text-3xl);
+            margin-bottom: 28px;
+        }
+        .order-list-title {
+            font-weight: 800;
+        }
+    }
+}

@@ -1,0 +1,123 @@
+@use "~mdshared/styles/_typography-vars"
+
+.md-calendar.fc
+  background-color: var(--calendar-background-color)
+
+  .fc-daygrid-day-number, .fc-timegrid-slot-label, .fc-timegrid-axis-cushion
+    font-family: RobotoMedium
+    color: var(--text-color)
+    @include t3-semibold
+
+  .fc-day-other
+    .fc-daygrid-day-top
+      opacity: 1
+
+      .fc-daygrid-day-number
+        color: var(--calendar-other-day-text-color)
+
+  .fc-col-header-cell
+    height: 38px
+    vertical-align: middle
+
+    .fc-col-header-cell-cushion
+      @include t3-semibold
+        font-family: RobotoMedium
+        color: var(--text-color)
+
+  .fc-daygrid-day
+    height: 150px
+
+    &.fc-day-today
+      background-color: var(--calendar-today-background-color)
+
+    // &.fc-day-sun
+
+    // &.fc-day-sun.fc-day-today
+
+    // &:not(.fc-day-sun).fc-day-today
+
+    .fc-daygrid-day-bg
+      .fully-booked
+        &.fc-bg-event
+          margin: 0
+          background-color: var(--calendar-fully-booked-background-color)
+
+  // .fc-day-today .fc-daygrid-day-number
+
+  .fc-daygrid-event, .fc-timegrid-event
+    border: none
+    flex-direction: column
+    align-items: start
+    background-color: #FFF
+    border-radius: 4px
+    box-shadow: 0 4px 20px rgba(211, 221, 229, 0.25)
+    padding: 11px 6px
+    white-space: normal
+    margin-top: 3px
+    @include t3-regular
+
+    // .fc-event-main
+
+    &.md-note
+      padding: 10px
+
+    &.md-job-current
+      border-top: 3px solid var(--calendar-current-job-background-color)
+
+    &.md-job-finished
+      border-top: 3px solid var(--calendar-finished-job-background-color)
+
+    &.md-job-onhold
+      border-top: 3px solid var(--calendar-onhold-job-background-color)
+
+    &.md-booking
+      border-top: 3px solid var(--calendar-booking-background-color)
+
+    &.md-work-hour
+      min-height: 60px
+
+    &.md-wh-finished
+      background: var(--timesheet-finished-wh-background-color)
+
+    &.md-wh-no-charge
+      background: var(--timesheet-internal-wh-background-color)
+
+    &.md-wh-inprogress
+      background: var(--timesheet-started-wh-background-color)
+
+    .job-time, .customer, .vehicle, .tags
+      @include t3-regular
+
+    .customer, .vehicle, .tags
+      margin-top: 12px
+
+    .employees
+      margin-top: 5px
+      width: 100%
+      display: flex
+      justify-content: flex-end
+      flex-flow: row wrap
+
+    .employee-tag
+      margin-left: 5px
+      margin-top: 5px
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      padding: 3px 8px
+      border-radius: 4px
+      color: #FFF
+
+.event-popover
+  &.md-job-current
+    border: 1px solid var(--calendar-current-job-background-color)
+
+  &.md-job-finished
+    border: 1px solid var(--calendar-finished-job-background-color)
+
+  &.md-job-onhold
+    border: 1px solid var(--calendar-onhold-job-background-color)
+
+  &.md-booking
+    border: 1px solid var(--calendar-booking-background-color)

@@ -1,0 +1,115 @@
+.pagination-component {
+    --pagination-size: 34px;
+    --color-btn-control: #EBEBEB;
+    --color-btn-active: #727272;
+    --color-btn-border: var(--color-gray);
+
+    &.ant-pagination {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        user-select: none;
+        .ant-pagination-item, 
+        .ant-pagination-prev, 
+        .ant-pagination-next {
+            width: var(--pagination-size);
+            min-width: var(--pagination-size);
+            height: var(--pagination-size);
+            margin-right: 0;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0;
+            border: 1px solid var(--color-btn-border);
+            a {
+                font-weight: 700;
+                color: var(--color-text);
+            }
+            &.ant-pagination-item-active {
+                border-color: var(--color-btn-active);
+                background-color: var(--color-btn-active);
+                cursor: default;
+                a {
+                    color: #FFFFFF;
+                    cursor: default;
+                }
+            }
+        }
+
+        .ant-pagination-disabled {
+            background: var(--color-btn-control) !important;
+        }
+        
+        .ant-pagination-prev {
+            &::after {
+                background: url("@/assets/images/icon/chevron-left.svg") no-repeat;
+                background-size: contain;
+            }
+            &.ant-pagination-disabled {
+                &::after {
+                    background: url("@/assets/images/icon/chevron-left-grey.svg") no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        .ant-pagination-next {
+            &::after {
+                background: url("@/assets/images/icon/chevron-right.svg") no-repeat;
+                background-size: contain;
+            }
+            &.ant-pagination-disabled {
+                &::after {
+                    background: url("@/assets/images/icon/chevron-right-grey.svg") no-repeat;
+                    background-size: contain;
+                }
+            }
+        }
+        .ant-pagination-prev, 
+        .ant-pagination-next {
+            position: relative;
+            background: var(--color-btn-control);
+            border-color: var(--color-btn-control);
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 24px;
+                height: 24px;
+                background-size: contain;
+            }
+            a {
+                opacity: 0;
+            }
+        }
+        .ant-pagination-jump-prev, .ant-pagination-jump-next {
+            width: 11px;
+            min-width: unset;
+            height: var(--pagination-size);
+            margin: 0;
+            pointer-events: none;
+            .ant-pagination-item-container {
+                position: relative;
+                &::after {
+                    content: "...";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    font-size: var(--text-sm);
+                    font-weight: bold;
+                }
+            }
+            .anticon, .ant-pagination-item-ellipsis {
+                opacity: 0;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+}

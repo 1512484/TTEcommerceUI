@@ -1,0 +1,29 @@
+.header-popover-component {
+    position: absolute;
+    top: calc(100% + 50px);
+    left: 0;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+    .popover-content {
+        padding-top: 18px;
+        padding-bottom: 88px;
+        .list-column {
+            width: 220px;
+            max-width: calc(100% / 5);
+        }
+        .banner {
+            width: 160px;
+            height: 254px;
+        }
+    }
+    &.active {
+        opacity: 1;
+        pointer-events: auto;
+        top: 100%;
+    }
+}

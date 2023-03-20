@@ -1,0 +1,17 @@
+.post-recommend-block-component {
+    width: 380px;
+
+    @media (max-width: 639px) {
+        width: 100%;
+        .ant-form {
+            margin-bottom: 16px;
+        }
+        .post-list {
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+        .chip-list {
+            margin-bottom: 30px;
+        }
+    }
+}

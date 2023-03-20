@@ -1,0 +1,18 @@
+.block-subscribe-component {
+    background: #F6F6F6;
+    .subscribe-content {
+        max-width: 585px;
+        margin: auto;
+        margin-top: 18px;
+        .email-input {
+            flex-grow: 1;
+            margin-bottom: 0;
+        }
+        .button-component {
+            &.ant-btn {
+                font-size: var(--text-base);
+                font-weight: 800;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+.color-list-component {
+    --color-size: 1rem;
+    .color {
+        position: relative;
+        width: var(--color-size);
+        min-width: var(--color-size);
+        height: var(--color-size);
+        border-radius: 50%;
+        cursor: pointer;
+        &.active {
+            &::after {
+                content: "";
+                position: absolute;
+                top: -4px;
+                left: -4px;
+                width: calc(100% + 8px);
+                height: calc(100% + 8px);
+                border-radius: inherit;
+                border: 1px solid #000;
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.search-modal-component {
+    .modal {
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            padding: 16px 20px 20px;
+            padding-right: 0;
+            // .search-modal-content {
+                .scroll-content {
+                    padding-bottom: 36px;
+                }
+            // }
+        }
+    }
+
+    .banner-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 18px;
+        .banner {
+            padding-bottom: 53.7%;
+        }
+    }
+
+    @media (max-width: 639px) {
+        .modal {
+            .modal-content {
+                padding: 12px 6px;
+                .ant-form, .scroll-content {
+                    padding-right: 4px;
+                }
+                .scroll-content {
+                    padding-bottom: 28px;
+                }
+                .ant-form {
+                    margin-bottom: 12px;
+                }
+                .chip-group {
+                    margin-bottom: 28px;
+                }
+            }
+        }
+
+        .banner-list {
+            grid-template-columns: 1fr;
+        }
+    }
+}

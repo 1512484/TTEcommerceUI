@@ -1,0 +1,58 @@
+.item-image-carousel-component {
+    // --slide-width: 100px;
+    * {
+        user-select: none;
+    }
+    .slide {
+        position: relative;
+    }
+    .main {
+        margin-bottom: 18px;
+        .slide {
+            width: 100% !important;
+            padding-bottom: 100%;
+        }
+    }
+    .thumbnails {
+        .agile__track {
+            gap: 15px;
+        }
+        .agile__slides {
+            gap: 15px;
+        }
+        .slide {
+            width: var(--slide-width) !important;
+            flex-grow: 0;
+            img {
+                width: var(--slide-width);
+                height: var(--slide-width);
+            }
+        }
+        .agile__actions {
+            margin-top: 16px;
+            .agile__dots {
+                gap: 10px;
+                .agile__dot {
+                    button {
+                        width: 10px;
+                        height: 10px;
+                        border-radius: 50%;
+                        background: #B8B8B8;
+                        padding: 0;
+                    }
+                    &.agile__dot--current {
+                        button {
+                            background: #767676;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 639px) {
+        .main {
+            margin-bottom: 16px;
+        }
+    }
+}

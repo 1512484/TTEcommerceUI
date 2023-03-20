@@ -1,0 +1,89 @@
+.filter-list-collapse-component {
+    background: transparent;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .ant-collapse-item {
+        border: 1px solid var(--color-border);
+        padding: 8px 0;
+        background: #FFFFFF;
+        transition: 0.3s ease-in-out;
+        .ant-collapse-header {
+            padding: 8px 16px;
+            padding-right: 48px;
+            font-size: var(-text-base);
+            font-weight: 800;
+            pointer-events: none;
+            .ant-collapse-arrow {
+                width: 24px;
+                height: 24px;
+                right: 16px;
+                background: url("@/assets/images/icon/chevron-down.svg") no-repeat;
+                background-size: contain;
+                transition: inherit;
+                opacity: 0;
+                svg {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .ant-collapse-content, .ant-collapse-content-box {
+            padding: 0;
+            border-top: none;
+        }
+
+        .ant-collapse-content-box {
+            .item {
+                position: relative;
+                width: 100%;
+                padding: 8px 16px;
+                margin: 0;
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 16px;
+                    width: calc(100% - 32px);
+                    border-top: 1px solid var(--color-border);
+                }
+
+                .ant-checkbox {
+                    & + span {
+                        padding-left: 8px;
+                    }
+                }
+                .ant-radio {
+                    --radio-size: 20px;
+                    & + span {
+                        padding-left: 10px;
+                    }
+                }
+            }
+        }
+
+        &.ant-collapse-item-active {
+            .ant-collapse-header {
+                .ant-collapse-arrow {
+                    transform: translateY(-11px) rotate(180deg);
+                }
+            }
+        }
+
+        &:not(.ant-collapse-item-active) {
+            padding: 0;
+        }
+    }
+
+    @media (max-width: 429px) {
+        .ant-collapse-item {
+            .ant-collapse-header {
+                pointer-events: auto;
+                .ant-collapse-arrow {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

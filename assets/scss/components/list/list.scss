@@ -1,0 +1,21 @@
+.list-component {
+    .list-content {
+        // grid-template-columns: repeat(auto-fill, minmax(276px, 1fr));
+        // grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    @media (max-width: 767px) {
+        .list-content {
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    }
+
+    @media (max-width: 429px) {
+        .list-content {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+    }
+}

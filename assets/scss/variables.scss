@@ -1,0 +1,47 @@
+:root {
+    --text-3xs: 8px;
+    --text-2xs: 10px;
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 18px;
+    --text-xl: 20px;
+    --text-2xl: 24px;
+    --text-3xl: 32px;
+    --text-4xl: 36px;
+
+    --color-primary: #295E61;
+    --color-secondary: #E17A35;
+    --color-text: #131313;
+    --color-top-page: var(--color-primary);
+    --color-header: #FBF8F1;
+    --color-footer: var(--color-primary);
+    --color-footer-divider: #286C70;
+    --color-footer-text: #FFFFFF;
+    --color-menu-hover: #EDEDED;
+    --color-old-price: #7A7A7A;
+    --color-border: #E1E1E1;
+    --color-gray: #A9A9A9;
+    --color-modal-close-button: #B70000;
+
+    --box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.2);
+
+    --gap: 30px;
+
+    --badge-size: 18px;
+    --badge-count-size: 14px;
+
+    --header-top: 30px;
+    --sticky-top: 114px;
+    /* --sticky-top: calc(102px + var(--badge-size)); */
+
+    @media (max-width: 900px) {
+        --gap: 20px;
+    }
+
+    @media (max-width: 767px) {
+        --header-top: 34px;
+        --sticky-top: 102px;
+        /* --sticky-top: calc(84px + var(--badge-size)); */
+    }
+}

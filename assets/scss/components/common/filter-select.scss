@@ -1,0 +1,98 @@
+.filter-select-component {
+    --input-width: 113px;
+
+    width: var(--input-width);
+    &.custom-input {
+        .ant-select {
+            &-selection {
+                padding: 3px 20px;
+                padding-right: 28px;
+                cursor: pointer;
+                &__rendered {
+                    height: 100%;
+                    margin-right: 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    ul {
+                        display: none;
+                    }    
+                }
+                &-selected-value {
+                    text-align: center;
+                    opacity: 0 !important;
+                }
+                &[aria-expanded="true"] {
+                    .ant-select-arrow {
+                        .ant-select-arrow-icon {
+                            transform: translateY(-2px) rotate(180deg);
+                        }
+                    }
+                }
+            }
+            &.ant-select-focused {
+                .ant-select-selection {
+                    border-color: transparent;
+                }
+            }
+            .ant-select-arrow {
+                margin-top: -8px;
+                --ant-select-arrow-icon-size: 18px;
+                right: 11px;
+                .ant-select-arrow-icon {
+                    background: url("@/assets/images/icon/chevron-down.svg") no-repeat;
+                }
+            }
+
+        }
+        
+        .ant-select-open {
+            & + .chevron-icon {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+
+        .chevron-icon {
+            --ant-select-arrow-icon-size: 18px;
+            position: absolute;
+            top: 50%;
+            right: 12px;
+            transform: translateY(-50%);
+            width: var(--ant-select-arrow-icon-size);
+            max-width: var(--ant-select-arrow-icon-size);
+            height: var(--ant-select-arrow-icon-size);
+            pointer-events: none;
+            transition: 0.2s ease-in-out;
+        }
+
+        .filter-icon {
+            position: absolute;
+            top: 50%;
+            left: 17px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            pointer-events: none;
+        }
+    
+        .input-placeholder {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding-top: 0;
+            line-height: 1;
+            margin-left: 5px;
+        }
+    }
+}
+
+.filter-select-dropdown {
+    box-shadow: none;
+    background: transparent;
+    .ant-select-dropdown-content {
+        width: 150px;
+        background: #fff;
+        box-shadow: var(--box-shadow);
+        transform: translateX(-37px) !important; // 113px - 150px 
+    }
+}

@@ -1,0 +1,87 @@
+.button-component {
+    --btn-height: 37px;
+    --color-btn-dark: 28, 28, 28;
+    --color-btn-light: 255, 255, 255;
+    --color-btn: var(--color-btn-dark);
+    // --button-hover-color: #313131;
+    // --button-active-color: #000000;
+    --color-btn-text: 255, 255, 255;
+    --btn-shadow: 1px 1px 6px rgba(0, 0, 0, 0.25);
+    --btn-icon-size: 20px;
+    &, * {
+        transition: 0.2s ease-in-out !important;
+    }
+    &.large {
+        --btn-height: 40px;
+    }
+    &.medium {
+        &.ant-btn {
+            padding: 9px 16px;
+        }
+    }
+    &.block {
+        width: 100%;
+        max-width: 100%;
+    }
+    &.ant-btn {
+        font-size: var(--text-sm);
+        font-weight: 700;
+        height: var(--btn-height);
+        padding: 9px 12px;
+        border-radius: 0;
+        box-shadow: var(--btn-shadow);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &-primary {
+            color: rgb(var(--color-btn-text));
+            background: rgb(var(--color-btn));
+            border-color: rgb(var(--color-btn));
+            &:hover, &:focus {
+                // background: var(--button-hover-color);
+                color: rgb(var(--color-btn-text));
+                background: rgba(var(--color-btn), 0.85);
+                border-color: transparent;
+            }
+            &:active {
+                // background: var(--button-active-color);
+                background: rgb(var(--color-btn));
+            }
+        }
+        &:not(.ant-btn-primary) {
+            &:hover, &:focus {
+                color: rgb(var(--color-btn));
+                border-color: rgb(var(--color-btn));
+            }
+            &:active {
+                // border-color: var(--button-active-color);
+                // box-shadow: inset 0 0 500px rgba(0, 0, 0, 0.05);
+                box-shadow: inset 0 0 500px rgba(var(--color-btn), 0.05);
+            }
+        }
+        &::after {
+            display: none;
+            // box-shadow: 0 0 0 5px var(--color-btn);
+        }
+        .anticon, .anticon svg {
+            width: var(--btn-icon-size);
+            height: var(--btn-icon-size);
+            transition: unset !important;
+        }
+        span {
+            text-shadow: none;
+        }
+    }
+
+    &.control-btn {
+        min-width: 212px;
+    }
+
+    &:not(.dark) {
+        border: 1px solid transparent;
+        &:hover {
+            border-color: rgb(var(--color-btn-text));
+            color: rgb(var(--color-btn-dark));
+        }
+    }
+}

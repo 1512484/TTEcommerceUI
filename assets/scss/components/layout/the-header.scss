@@ -1,0 +1,99 @@
+.the-header-component {
+    .top-page {
+        background-color: var(--color-top-page);
+        color: white;
+        padding: 8px;
+    }
+    .header {
+        background-color: var(--color-header);
+        .header-top {
+            padding-top: 12px;
+            padding-bottom: 18px;
+            .logo {
+                width: 103px;
+                height: 36px;
+                img {
+                    object-fit: contain;
+                }
+            }
+        }
+        .user-icon {
+            width: var(--badge-size);
+            height: var(--badge-size);
+        }
+        .header-bottom {
+            padding-top: 12px;
+            padding-bottom: 12px;
+        }
+        .nav-list {
+            .nav-item {
+                font-size: var(--text-base);
+                padding: 0;
+                background: transparent;
+                cursor: pointer;
+                a {
+                    color: var(--color-text);
+                }
+
+                &.active {
+                    font-weight: 800;
+                }
+            }
+            .product {
+                &:focus {
+                    .header-popover {
+                        opacity: 1;
+                        pointer-events: auto;
+                        top: 100%;
+                    }
+                }
+            }
+        }
+        .icon-group {
+            gap: 18px;
+        }
+        .ant-badge {
+            width: var(--badge-size);
+            height: var(--badge-size);
+            .ant-badge-count {
+                font-size: var(--text-xs);
+                width: var(--badge-count-size);
+                min-width: var(--badge-count-size);
+                height: var(--badge-count-size);
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transform: translate(calc(50% + 2px), calc(-50% + 3px));
+                background: #EB5757;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        .top-page {
+            padding: 8px;
+        }
+        .header {
+            .header-top {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                .logo {
+                    width: 59px;
+                    height: 22px;
+                }
+            }
+            .header-bottom {
+                padding-top: 10px;
+                padding-bottom: 4px;
+                .search-input {
+                    --input-height: 36px;
+                    --input-y-padding: 11px;
+                    input {
+                        border-radius: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

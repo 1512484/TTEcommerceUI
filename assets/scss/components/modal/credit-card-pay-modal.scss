@@ -1,0 +1,49 @@
+.credit-card-pay-modal {
+    .modal {
+        width: 994px;
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            padding: 20px;
+            padding-right: 0;
+            & > div {
+                padding-right: 20px;
+            }
+            .payment-content {
+                max-width: 790px;
+                width: 100%;
+                margin: auto;
+                padding: 8px 0 30px;
+            }
+            .ant-radio-group {
+                gap: 100px;
+                .ant-radio-wrapper {
+                    margin-right: 0;
+                }
+            }
+            .card-item {
+                img {
+                    width: 70px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        .modal {
+            .modal-content {
+                .payment-content {
+                    padding: 1px 1px 8px;
+                }
+                .ant-radio-group {
+                    gap: 18px;
+                    margin-bottom: 18px;
+                }
+                .ant-checkbox-wrapper {
+                    margin-bottom: 14px;
+                }
+            }
+        }
+    }
+}

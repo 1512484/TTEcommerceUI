@@ -1,0 +1,24 @@
+.account-page {
+    padding-top: 40px;
+    padding-bottom: 70px;
+    max-width: 790px;
+    .custom-input {
+        --input-margin-bottom: 20px;
+    }
+    .text-gray {
+        color: #828282;
+    }
+
+    @media  (max-width: 639px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .page-title {
+            font-size: var(--text-3xl);
+            margin-bottom: 28px;
+            text-align: center;
+        }
+        .google-sign-up {
+            padding: 13px 0;
+        }
+    }
+}

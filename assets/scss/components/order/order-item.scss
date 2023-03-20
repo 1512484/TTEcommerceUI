@@ -1,0 +1,43 @@
+.order-item-component {
+    .item-content {
+        --thumbnail-size: 80px;
+        .thumbnail {
+            width: var(--thumbnail-size);
+            min-width: var(--thumbnail-size);
+            height: var(--thumbnail-size);
+        }
+        .info {
+            margin-top: -3px;
+        }
+        .name-group {
+            max-width: 123px;           
+        }
+    }
+    
+    @media (max-width: 639px) {
+        .item-content {
+            .info {
+                width: calc(100% - var(--thumbnail-size) - 16px);
+                .order-name-status-group {
+                    justify-content: space-between;
+                }
+                .name-group {
+                    max-width: unset;
+                }
+                .status-group {
+                    flex-direction: column;
+                    column-gap: 16px;
+                    .chip-component {
+                        margin-left: 0;
+                        margin-right: 0;
+                    }
+                }
+            }
+            .detail-btn {
+                margin: 0;
+                margin-left: auto;
+                width: max-content;
+            }
+        }
+    }
+}

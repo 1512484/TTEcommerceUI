@@ -1,0 +1,112 @@
+.checkout-page {
+    padding-top: 18px;
+    // padding-bottom: 60px;
+    .checkout-content {
+        display: flex;
+        align-items: flex-start;
+        // gap: 60px;
+        gap: 30px;
+        margin-bottom: 60px;
+        .left-content {
+            // width: calc(40% - 30px);
+            width: 45%;
+            max-width: 484px;
+        }
+        .right-content {
+            // width: calc(60% - 30px);
+            width: 55%;
+            margin-left: auto;
+            padding: 24px 36px 140px;
+            background: #F5F5F5;
+            .cart-list {
+                .cart-item {
+                    --thumbnail-size: 50px;
+                    display: flex;
+                    gap: 14px;
+                    padding: 18px 0;
+                    border-bottom: 1px solid var(--color-border);
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+
+                    .thumbnail {
+                        width: var(--thumbnail-size);
+                        min-width: var(--thumbnail-size);
+                        height: var(--thumbnail-size);
+                    }
+
+                    .info {
+                        margin-top: -5px;
+                    }
+                }
+            }
+            .coupon-content {
+                margin-bottom: 36px;
+                .button-component {
+                    &.ant-btn {
+                        padding: 9px 28px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    .submit-btn {
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 767px) {
+        .checkout-content {
+            gap: 20px;
+            .right-content {
+                padding: 24px 20px 140px;
+            }
+        }
+    }
+
+    @media (max-width: 639px) {
+        padding-top: 14px;
+        .breadcrumb-component {
+            margin-bottom: 14px;
+        }
+        .checkout-content {
+            flex-direction: column-reverse;
+            margin-bottom: 12px;
+            .left-content, .right-content {
+                width: 100%;
+                max-width: 100%;
+            }
+            .right-content {
+                padding: 28px 20px;
+                .coupon-content {
+                    margin-bottom: 14px;
+                    .button-component {
+                        &.ant-btn {
+                            padding: 9px 13px;
+                        }
+                    }
+                }
+                .total-content {
+                    .item {
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+            .left-content {
+                .group-title {
+                    margin: 28px 0 12px;
+                    &:first-of-type {
+                        margin: 0 0 16px;
+                    }
+                    &:last-of-type {
+                        margin: 14px 0 12px;
+                    }
+                }
+            }
+        }
+        .submit-btn {
+            margin-bottom: 28px;
+        }
+    }
+}

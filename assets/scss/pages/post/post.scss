@@ -1,0 +1,18 @@
+.post-page {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    .post-content {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    @media (max-width: 639px) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        .post-content {
+            flex-direction: column;
+            margin-bottom: 0;
+        }
+    }
+}

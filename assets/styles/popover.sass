@@ -1,0 +1,37 @@
+.md-popover
+  .popover-header
+    margin-bottom: 24px
+
+    button
+      svg[data-icon="times"]
+        color: $text-tertiary-color
+
+  .description
+    display: flex
+    margin-top: 12px
+    min-width: 200px
+    align-items: baseline
+
+    .label
+      float: left
+      width: 90px
+      text-align: right
+      padding-right: 10px
+      color: $text-tertiary-color
+      @include text-2-regular
+
+    .content
+      color: $text-primary-color
+      @include text-2-semibold
+
+  &.md-job-current
+    border: 1px solid $standard-blue-color
+
+  &.md-job-finished
+    border: 1px solid $subtle-green-color
+
+  &.md-job-onhold
+    border: 1px solid $subtle-yellow-color
+
+  &.md-booking
+    border: 1px solid $standard-purple-color

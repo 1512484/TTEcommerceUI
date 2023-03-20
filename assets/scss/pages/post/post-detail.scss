@@ -1,0 +1,16 @@
+.post-detail-page {
+    padding-top: 60px;
+    padding-bottom: 145px;
+    .post-detail-content {
+        display: flex;
+        gap: 30px;
+    }
+
+    @media (max-width: 639px) {
+        padding-top: 30px;
+        padding-bottom: 0;
+        .post-detail-content {
+            flex-direction: column;
+        }
+    }
+}

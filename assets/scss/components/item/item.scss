@@ -1,0 +1,43 @@
+.item-component {
+    --color-tag: #888888;
+    --icon-width: 28px;
+    cursor: pointer;
+    * {
+        transition: 0.5s ease;
+    }
+    .thumbnail {
+        display: block;
+        padding-bottom: 100%;
+        background: #F3F3F3;
+    }
+    .tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: var(--text-base);
+        font-weight: 800;
+        padding: 5px 15px;
+        border-bottom-right-radius: 10px;
+        background: var(--color-tag);
+        color: #FFFFFF;
+        opacity: 0;
+    }
+    .icon-list {
+        opacity: 0;
+        img {
+            width: var(--icon-width);
+            max-width: var(--icon-width);
+        }
+    }
+    &:hover {
+        .tag, .icon-list {
+            opacity: 1;
+        }
+    }
+    .old-price {
+        color: var(--color-old-price);
+    }
+    p {
+        color: var(--color-text);
+    }
+}

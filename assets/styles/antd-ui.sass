@@ -1,0 +1,96 @@
+// Checkbox
+.ant-checkbox-wrapper
+  .ant-checkbox-inner
+    border-color: $standard-grey-color
+
+  &.booking
+    .ant-checkbox-checked .ant-checkbox-inner
+      background-color: $standard-purple-color
+      border-color: $standard-purple-color
+
+  &.current-job
+    .ant-checkbox-checked .ant-checkbox-inner
+      background-color: $standard-blue-color
+      border-color: $standard-blue-color
+
+  &.finished-job
+    .ant-checkbox-checked .ant-checkbox-inner
+      background-color: $subtle-green-color
+      border-color: $subtle-green-color
+
+  &.onhold-job
+    .ant-checkbox-checked .ant-checkbox-inner
+      background-color: $subtle-yellow-color
+      border-color: $subtle-yellow-color
+
+  @include text-2-semibold
+
+// Divider
+.md-divider-horizontal
+  margin: 0
+  background: $subtle-grey-color
+
+// Button
+.ant-btn
+  display: inline-flex
+  align-items: center
+  box-shadow: none
+  @include text-2-semibold
+
+  &.no-outline
+    border: none
+
+    &:active
+      border: none
+
+.ant-btn-danger
+  border: 1px solid rgba(188, 47, 47, 0.2)
+  box-shadow: none
+
+// Radio buttons
+.ant-radio-group
+  background-color: $tabs-background-color
+  display: inline-flex
+  align-items: center
+  padding-left: 5px
+  padding-right: 5px
+  border-radius: 4px
+
+  .ant-radio-button-wrapper
+    border: none
+    display: inline-flex
+    align-items: center
+
+    &:hover
+      color: $standard-primary-color
+
+    &:not(:first-child)::before
+      background-color: $tabs-background-color
+
+    @include text-2-semibold
+
+  .ant-radio-button-wrapper-checked
+    height: 22px
+
+    &:not(.ant-radio-button-wrapper-disabled)
+      color: $standard-primary-color
+      box-shadow: none
+
+    &:not(.ant-radio-button-wrapper-disabled)::before
+      background-color: #fff !important
+
+    &:not(.ant-radio-button-wrapper-disabled):hover
+      border-color: #fff
+      box-shadow: none
+
+//Card
+.ant-card
+  box-shadow: 0 4px 20px rgba(211, 221, 229, 0.25)
+  color: $text-primary-color
+
+// ant-form-item
+.ant-form
+  @include text-2-semibold
+
+.ant-form label
+  @include text-2-semibold

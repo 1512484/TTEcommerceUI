@@ -1,0 +1,103 @@
+@use "~mdshared/styles/_typography-vars"
+
+.data-info
+  margin-bottom: 10px
+
+  .label-name
+    font-size: 14px
+    display: inline-block
+
+.data-binding
+  font-size: 14px
+
+.avatar, .logo
+  width: 100px
+  border-radius: 4px
+
+  &:hover
+    opacity: 0.4
+
+.well
+  min-height: 20px
+  padding: 19px
+  margin-bottom: 20px
+
+.inline
+  display: inline
+
+.errors
+  color: red
+
+.no-image
+  width: 100px
+  height: 100px
+  background-color: #C0C9D8
+  display: table
+  border-radius: 4px
+
+  .icon-camera
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+    color: #fff
+
+  a:hover
+    cursor: url("~assets/images/edit.png"), auto
+
+.editable
+  min-height: 20px
+
+  &:hover
+    background-color: #fff
+    cursor: url("~assets/images/edit.png"), auto
+    transition-delay: 0.3s
+
+.width100
+  width: 100px
+
+.sub-header
+  font-size: 12px
+  line-height: 14px
+  color: #7084A9
+  margin-bottom: 30px
+
+.page-header
+  padding: 16px 32px 24px
+  @include t4-regular
+
+.report
+  margin-bottom: 40px
+
+.report-container
+  overflow: auto
+
+.report-pie
+  height: 300px
+  width: 100%
+
+.report-bar
+  height: 300px
+  width: 100%
+
+.footer
+  width: 100%
+  display: flex
+
+.padding-left-right-12
+  padding-left: 12px
+  padding-right: 12px
+
+.padding-left-32
+  padding-left: 32px
+
+.padding-right-32
+  padding-right: 32px
+
+.overflow-hidden
+  overflow: hidden
+
+.overflow-auto
+  overflow: auto
+
+.hide
+  display: none

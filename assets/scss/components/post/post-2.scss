@@ -1,0 +1,13 @@
+.post-2-component {
+    --thumbnail-width: 74px;
+    .thumbnail {
+        width: var(--thumbnail-width);
+        min-width: var(--thumbnail-width);
+        height: var(--thumbnail-width);
+    }
+    .post-info {
+        .date-time {
+            color: #7D7D7D;
+        }
+    }
+}

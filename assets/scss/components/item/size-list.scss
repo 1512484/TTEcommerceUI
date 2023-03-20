@@ -1,0 +1,16 @@
+.size-list-component {
+    --color-size-border: var(--color-gray);
+    --color-size-active: #727272;
+    .size {
+        min-width: 34px;
+        height: 34px;
+        border: 1px solid var(--color-size-border);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+        &.active {
+            border-color: var(--color-size-active);
+            background: var(--color-size-active);
+            color: #FFFFFF;
+        }
+    }
+}

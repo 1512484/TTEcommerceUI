@@ -1,0 +1,24 @@
+.post-carousel-component {
+    padding-left: 30px;
+    padding-right: 30px;
+    .agile__list {
+        z-index: 1;
+    }
+    .agile__actions {
+        position: absolute;
+        top: 32.55%;
+        left: -30px;
+        transform: translateY(-50%);
+        width: calc(100% + 60px);
+        button {
+            padding: 0;
+            background: transparent;
+        }
+    }
+
+    @media (max-width: 330px) {
+        .agile__actions {
+            top: 31%;
+        }
+    }
+}
