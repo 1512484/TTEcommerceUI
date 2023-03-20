@@ -23,7 +23,7 @@
                         </a-badge>
                         <a-dropdown :getPopupContainer="() => $refs.headerTopRef" :trigger="['click']" overlay-class-name="user-dropdown">
                             <a-menu slot="overlay">
-                                <a-menu-item key="1" @click="$router.push('/admin')">Admin Page</a-menu-item>
+                                <a-menu-item key="0" @click="$router.push('/admin')">Admin Page</a-menu-item>
                                 <a-menu-item key="1" @click="$router.push('/sign-up')">Sign up</a-menu-item>
                                 <a-menu-item key="2" @click="$router.push('/account')">My Account</a-menu-item>
                                 <a-menu-item key="3" @click="$router.push('/order')">My Order</a-menu-item>
