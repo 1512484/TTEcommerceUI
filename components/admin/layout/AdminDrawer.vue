@@ -7,7 +7,7 @@
         </div>
         <div class="flex-grow pt-8 pb-7 mt-7 drawer-content">
             <a-menu :default-selected-keys="['dashboard']" :open-keys.sync="openKeys" mode="inline" class="h-full flex flex-col">
-                <a-menu-item key="dashboard">
+                <a-menu-item key="dashboard" @click="$router.push('/admin')">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M17.5 8.3335H2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M17.5 5H2.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -26,17 +26,17 @@
                         </svg>
                         <span>Products</span>
                     </span>
-                    <a-menu-item key="collections">
+                    <a-menu-item key="collections" @click="$router.push('/admin/collection')">
                         Collections
                     </a-menu-item>
-                    <a-menu-item key="category">
+                    <a-menu-item key="category" @click="$router.push('/admin/category')">
                         Category
                     </a-menu-item>
-                    <a-menu-item key="items">
+                    <a-menu-item key="items" @click="$router.push('/admin/item')">
                         Items
                     </a-menu-item>
                 </a-sub-menu>
-                <a-menu-item key="orders">
+                <a-menu-item key="orders" @click="$router.push('/admin/order')">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_889_1744)">
                             <path d="M10 0.833496V19.1668" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,7 +45,7 @@
                     </svg>
                     <span>Orders</span>
                 </a-menu-item>
-                <a-menu-item key="users">
+                <a-menu-item key="users" @click="$router.push('/admin/user')">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_889_1748)">
                             <path d="M14.1668 17.5V15.8333C14.1668 14.9493 13.8156 14.1014 13.1905 13.4763C12.5654 12.8512 11.7176 12.5 10.8335 12.5H4.16683C3.28277 12.5 2.43493 12.8512 1.80981 13.4763C1.18469 14.1014 0.833496 14.9493 0.833496 15.8333V17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -56,7 +56,7 @@
                     </svg>
                     <span>Users</span>
                 </a-menu-item>
-                <a-menu-item key="banners">
+                <a-menu-item key="banners" @click="$router.push('/admin/banner')">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.8333 2.5H4.16667C3.24619 2.5 2.5 3.24619 2.5 4.16667V15.8333C2.5 16.7538 3.24619 17.5 4.16667 17.5H15.8333C16.7538 17.5 17.5 16.7538 17.5 15.8333V4.16667C17.5 3.24619 16.7538 2.5 15.8333 2.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M7.0835 8.3335C7.77385 8.3335 8.3335 7.77385 8.3335 7.0835C8.3335 6.39314 7.77385 5.8335 7.0835 5.8335C6.39314 5.8335 5.8335 6.39314 5.8335 7.0835C5.8335 7.77385 6.39314 8.3335 7.0835 8.3335Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,14 +64,14 @@
                     </svg>
                     <span>Banners</span>
                 </a-menu-item>
-                <a-menu-item key="faqs">
+                <a-menu-item key="faqs" @click="$router.push('/admin/faq')">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.6668 1.6665H5.00016C4.55814 1.6665 4.13421 1.8421 3.82165 2.15466C3.50909 2.46722 3.3335 2.89114 3.3335 3.33317V16.6665C3.3335 17.1085 3.50909 17.5325 3.82165 17.845C4.13421 18.1576 4.55814 18.3332 5.00016 18.3332H15.0002C15.4422 18.3332 15.8661 18.1576 16.1787 17.845C16.4912 17.5325 16.6668 17.1085 16.6668 16.6665V6.6665L11.6668 1.6665Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M11.6665 1.6665V6.6665H16.6665" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                     <span>Theme FAQs</span>
                 </a-menu-item>
-                <a-menu-item key="settings">
+                <a-menu-item key="settings" @click="$router.push('/admin/setting')">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g clip-path="url(#clip0_1059_1457)">
                             <path d="M10 12.5C11.3807 12.5 12.5 11.3807 12.5 10C12.5 8.61929 11.3807 7.5 10 7.5C8.61929 7.5 7.5 8.61929 7.5 10C7.5 11.3807 8.61929 12.5 10 12.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>

@@ -893,13 +893,15 @@ $screens: (
                 }
             }
             .ant-table-body {
-                max-height: calc(100vh - 535px) !important;
+                // max-height: calc(100vh - 535px) !important;
+                max-height: calc(100vh - 470px) !important;
             }
             .ant-table-footer {
                 min-height: 65px;
                 border-top-color: #E1E1E1;
                 background: transparent;
                 opacity: 0;
+                display: none;
             }
         }
     }
