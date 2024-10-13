@@ -69,7 +69,7 @@ export default {
             ],
             size: null,
             quantity: 1,
-            image: images[Math.round(Math.random() * images.length)]
+            image: images[Math.floor(Math.random() * images.length)]
         }
     }
 }

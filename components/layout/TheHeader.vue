@@ -23,11 +23,11 @@
                         </a-badge>
                         <a-dropdown :getPopupContainer="() => $refs.headerTopRef" :trigger="['click']" overlay-class-name="user-dropdown">
                             <a-menu slot="overlay">
-                                <a-menu-item key="0" @click="$router.push('/admin')">Admin Page</a-menu-item>
+                                <!-- <a-menu-item key="0" @click="$router.push('/admin')">Admin Page</a-menu-item> -->
                                 <a-menu-item key="1" @click="$router.push('/sign-up')">Sign up</a-menu-item>
                                 <a-menu-item key="2" @click="$router.push('/account')">My Account</a-menu-item>
                                 <a-menu-item key="3" @click="$router.push('/order')">My Order</a-menu-item>
-                                <a-menu-item key="4">Notification</a-menu-item>
+                                <!-- <a-menu-item key="4">Notification</a-menu-item> -->
                                 <a-menu-item key="5" @click="$router.push('/password')">Password</a-menu-item>
                                 <a-menu-item key="6" @click="$refs.signOutModalRef.open()">Logout</a-menu-item>
                             </a-menu>
@@ -42,13 +42,14 @@
                 <div class="container flex items-center justify-between header-bottom">
                     <div class="flex items-center gap-8 pl-0 nav-list hidden-md-and-down">
                         <button class="nav-item" :class="{'active': $route.name == 'index'}"><NuxtLink to="/">HOME</NuxtLink></button>
-                        <button class="nav-item" :class="{'active': $route.name == 'category'}"><NuxtLink to="/item">WHAT'S NEW</NuxtLink></button>
-                        <button class="nav-item product" ref="productNavRef">
+                        <button class="nav-item" :class="{'active': ['item', 'item-id'].includes($route.name)}"><NuxtLink to="/item">PRODUCTS</NuxtLink></button>
+                        <!-- <button class="nav-item" :class="{'active': $route.name == 'category'}"><NuxtLink to="/item">WHAT'S NEW</NuxtLink></button> -->
+                        <!-- <button class="nav-item product" ref="productNavRef">
                             PRODUCTS
                             <HeaderPopover class="header-popover" @select="$refs.productNavRef.blur()" />
-                        </button>
-                        <button class="nav-item"><NuxtLink to="/">PROMOTIONS</NuxtLink></button>
-                        <button class="nav-item" :class="{'active': $route.name == 'post'}"><NuxtLink to="/post">BLOG</NuxtLink></button>
+                        </button> -->
+                        <button class="nav-item" :class="{'active': $route.name == 'promotion'}"><NuxtLink to="/promotion">PROMOTIONS</NuxtLink></button>
+                        <button class="nav-item" :class="{'active': ['post', 'post-id'].includes($route.name)}"><NuxtLink to="/post">BLOG</NuxtLink></button>
                         <button class="nav-item" :class="{'active': $route.name == 'contact'}"><NuxtLink to="/contact">CONTACTS</NuxtLink></button>
                     </div>
                     <div class="flex items-center icon-group hidden-md-and-down">

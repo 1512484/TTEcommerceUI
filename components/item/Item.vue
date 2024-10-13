@@ -36,7 +36,7 @@ export default {
         }
     },
     data() {
-        let image = images[Math.round(Math.random() * images.length)];
+        let image = images[Math.floor(Math.random() * images.length)];
         return {
             image
         }

@@ -45,7 +45,7 @@ export default {
     data() {
         return {
             form: this.$form.createForm(this, { name: 'comment_rule' }),
-            image: images[Math.round(Math.random() * images.length)],
+            image: images[Math.floor(Math.random() * images.length)],
             comment: "",
             sortOptions: [
                 { id: 1, label: 'Latest reviews', value: 'created_at' },

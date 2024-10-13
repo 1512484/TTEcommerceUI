@@ -53,11 +53,15 @@ export default {
             activeKey: [],
             menuItems: [
                 { id: 1, title: "Home", path: "/" },
-                { id: 2, title: "What's New", children: children },
-                { id: 3, title: "Products", children: children },
-                { id: 4, title: "Promotions", children: children },
-                { id: 5, title: "Blog", children: children },
-                { id: 6, title: "Contacts", children: children }
+                { id: 2, title: "Products", path: "/item" },
+                { id: 3, title: "Promotions", path: "/promotion" },
+                { id: 4, title: "Blog", path: "/post" },
+                { id: 5, title: "Contact", path: "/contact" }
+                // { id: 2, title: "What's New", children: children },
+                // { id: 3, title: "Products", children: children },
+                // { id: 4, title: "Promotions", children: children },
+                // { id: 5, title: "Blog", children: children },
+                // { id: 6, title: "Contacts", children: children }
             ]
         }
     },

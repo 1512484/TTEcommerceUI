@@ -27,8 +27,8 @@ import { images } from "@/static/data.js";
 export default {
     data() {
         return {
-            image: images[Math.round(Math.random() * images.length)],
-            image1: images[Math.round(Math.random() * images.length)],
+            image: images[Math.floor(Math.random() * images.length)],
+            image1: images[Math.floor(Math.random() * images.length)],
         }
     }
 }

@@ -76,7 +76,7 @@ export default {
     data() {
         return {
             form: this.$form.createForm(this, { name: 'contact_rule' }),
-            image: images[Math.round(Math.random() * images.length)],
+            image: images[Math.floor(Math.random() * images.length)],
             email: "",
             message: "",
             rules: {

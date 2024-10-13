@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full flex flex-col justify-center items-center container sign-up-page">
+    <div class="h-full flex flex-col justify-center items-center container sign-up-page overflow-auto">
         <NuxtLink to="/" class="w-max-content">
             <img src="@/assets/images/logo.svg" class="mb-7.5 logo" />
         </NuxtLink>
@@ -23,10 +23,11 @@
         </a-form>
 
         <p class="text-center term-privacy">
-            By logging you agree to our 
+            <!-- By logging you agree to our 
             <NuxtLink class="font-bold" to="/sign-in">Terms</NuxtLink> 
             and 
-            <NuxtLink class="font-bold" to="/sign-in">Privacy Policy</NuxtLink>
+            <NuxtLink class="font-bold" to="/sign-in">Privacy Policy</NuxtLink> -->
+            Already have an account? <NuxtLink class="font-bold" to="/sign-in">Sign in</NuxtLink>
         </p>
     </div>
 </template>
